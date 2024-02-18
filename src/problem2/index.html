@@ -10,15 +10,23 @@
 <body>
 
   <!-- You may reorganise the whole HTML, as long as your form achieves the same effect. -->
-  <form onsubmit="return !1">
-    <h5>Swap</h5>
+  <form id="swap-form">
+    <h2>Swap Currency</h2>
+    <div class="send">
     <label for="input-amount">Amount to send</label>
-    <input id="input-amount" />
+    <input id="input-amount" type="number" step="0.01" />
+    <select name="currencies" class="currencies" id="currencies-input">
+    </select>
+    </div>
 
+    <div class="receive">
     <label for="output-amount">Amount to receive</label>
-    <input id="output-amount" />
+    <input id="output-amount" type="number" step="0.01" />
+    <select name="currencies" class="currencies" id="currencies-output">
+    </select>
+    </div>
 
-    <button>CONFIRM SWAP</button>
+    <button type="submit">CONFIRM SWAP</button>
   </form>
   <script src="script.js"></script>
 </body>
