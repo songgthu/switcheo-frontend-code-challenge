@@ -1,0 +1,4 @@
+List out the computational inefficiencies and anti-patterns found in the code block:
+
+1. The if conditional statements inside the sortedBalances part can be combined into a single condition, and `lhsPriority` should be replaced with `balancePriority`.
+2. The `formattedBalances` logic can be placed inside the `rows` creation part to avoid calling `sortedBalances.map` twice.
